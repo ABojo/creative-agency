@@ -1,4 +1,5 @@
 @use "./components/header";
+@use "./components/hero";
 
 :root {
   --color-red: #f94f4f;
@@ -15,6 +16,7 @@
   --fw-2: 800;
 
   --side-padding: clamp(1rem, 11vw, 10rem);
+  --line-height: 2rem;
 }
 
 *,

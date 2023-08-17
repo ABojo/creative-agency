@@ -1,0 +1,40 @@
+.hero {
+  padding: 6.5rem 0;
+  padding-left: var(--side-padding);
+  background-image: url("../assets/images/desktop/image-hero.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &__intro {
+    max-width: 35rem;
+  }
+
+  &__heading {
+    font-weight: var(--fw-2);
+    margin-bottom: 2rem;
+    font-size: var(--fs-1);
+  }
+
+  &__paragraph {
+    font-size: var(--fs-4);
+    line-height: var(--line-height);
+    color: var(--color-black-text);
+    margin-bottom: 4rem;
+  }
+
+  &__cta {
+    color: var(--color-white);
+    background-color: var(--color-red);
+    padding: 1.75rem 2.75rem;
+    text-decoration: none;
+    font-weight: var(--fw-2);
+    font-size: var(--fs-4);
+    transition: all 0.2s;
+    display: inline-block;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
