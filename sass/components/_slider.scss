@@ -21,19 +21,44 @@
   &__heading {
     font-size: var(--fs-2);
     margin-bottom: 3rem;
+    max-width: 34rem;
   }
 
   &__graphic {
+    position: relative;
+    left: -25%;
+    width: 125%;
+    z-index: -1;
+
     img {
       width: 100%;
       height: 100%;
     }
   }
 
+  &__graphic-overlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: end;
+    padding: 5rem;
+    padding-right: 10rem;
+    gap: 0.5rem;
+    font-size: var(--fs-4);
+  }
+
   &__arrows {
     display: flex;
     gap: 1rem;
   }
+
   &__arrow {
     background-color: transparent;
     border: none;
