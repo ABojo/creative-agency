@@ -1,0 +1,47 @@
+.slider {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: var(--color-white);
+  position: relative;
+
+  &__wave {
+    position: absolute;
+    left: 51%;
+    top: 11.5rem;
+    transform: translateX(-50%);
+  }
+
+  &__main {
+    background-color: var(--color-black-bg);
+    padding-left: var(--side-padding);
+    padding-block: 9rem;
+    align-self: start;
+  }
+
+  &__heading {
+    font-size: var(--fs-2);
+    margin-bottom: 3rem;
+  }
+
+  &__graphic {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    gap: 1rem;
+  }
+  &__arrow {
+    background-color: transparent;
+    border: none;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
