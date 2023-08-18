@@ -14,6 +14,7 @@
   &__graphic {
     img {
       width: 100%;
+      height: 100%;
     }
   }
 
@@ -49,11 +50,16 @@
       color: var(--color-red);
       font-weight: var(--fw-2);
       padding-bottom: 0.5rem;
+      transition: all 0.2s;
+
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 
   &__approach {
-    padding-top: 14rem;
+    padding-top: 15.25rem;
     padding-left: var(--side-padding);
 
     h2 {
@@ -70,23 +76,36 @@
     background-color: var(--color-red);
     position: relative;
     padding-block: 6rem;
+    padding-bottom: 13rem;
+    padding-left: var(--side-padding);
 
     &::after {
       content: "";
-      display: none;
-      width: 120%;
-      height: 120%;
-      background-color: blue;
-      position: relative;
-      top: -11rem;
-      left: -12rem;
+      display: block;
+      width: 100%;
+      height: 10rem;
+      background-color: var(--color-red);
+      position: absolute;
+      top: -9.5rem;
+      left: 0;
+      z-index: 1;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 12rem;
+      height: calc(100% + 9.5rem);
+      background-color: var(--color-red);
+      position: absolute;
+      top: -9.5rem;
+      left: -11rem;
       z-index: 1;
     }
   }
 
   &__item {
     position: relative;
-    margin: 0 auto;
   }
 
   &__number {
@@ -106,7 +125,6 @@
 
   &__list {
     max-width: 27.5rem;
-    margin: 0 auto;
     list-style-type: none;
     display: flex;
     flex-direction: column;
