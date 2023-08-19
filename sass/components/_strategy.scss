@@ -39,14 +39,42 @@
     }
 
     @media (max-width: $bp-7) {
+      top: 22rem;
+    }
+
+    @media (max-width: $bp-9) {
       top: 50vw;
     }
   }
 
   &__graphic {
+    @media (max-width: $bp-7) {
+      height: 23rem;
+      width: 100%;
+      background-color: var(--color-red);
+    }
+
+    @media (max-width: $bp-9) {
+      height: unset;
+    }
+
     img {
       width: 100%;
       height: 100%;
+    }
+
+    img,
+    source {
+      @media (max-width: $bp-7) {
+        height: 30rem;
+        object-position: center;
+        object-fit: contain;
+      }
+
+      @media (max-width: $bp-9) {
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 
