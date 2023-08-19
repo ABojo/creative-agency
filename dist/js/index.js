@@ -4,7 +4,9 @@ const rightArrow = document.getElementById("right-arrow");
 //encapsulates slider logic
 const slider = (function () {
   const heading = document.querySelector(".slider__heading");
-  const image = document.querySelector(".slider__graphic img");
+  const mobileSlide = document.getElementById("slide-mobile");
+  const tabletSlide = document.getElementById("slide-tablet");
+  const desktopSlide = document.getElementById("slide-desktop");
   const imageHeading = document.querySelector(".slider__graphic-overlay h3");
   const imageDate = document.querySelector(".slider__graphic-overlay span");
 
@@ -15,7 +17,7 @@ const slider = (function () {
       heading: "Branding naming & guidelines",
       images: {
         desktop: "assets/images/desktop/image-slide-1.jpg",
-        table: "assets/images/tablet/image-slide-1.jpg",
+        tablet: "assets/images/tablet/image-slide-1.jpg",
         mobile: "assets/images/mobile/image-slide-1.jpg",
       },
       imageHeading: "Lean Product Roadmap",
@@ -25,7 +27,7 @@ const slider = (function () {
       heading: "Brand identity & merchandise",
       images: {
         desktop: "assets/images/desktop/image-slide-2.jpg",
-        table: "assets/images/tablet/image-slide-2.jpg",
+        tablet: "assets/images/tablet/image-slide-2.jpg",
         mobile: "assets/images/mobile/image-slide-2.jpg",
       },
       imageHeading: "New Majestic Hotel",
@@ -35,7 +37,7 @@ const slider = (function () {
       heading: "Brand identity & web design",
       images: {
         desktop: "assets/images/desktop/image-slide-3.jpg",
-        table: "assets/images/tablet/image-slide-3.jpg",
+        tablet: "assets/images/tablet/image-slide-3.jpg",
         mobile: "assets/images/mobile/image-slide-3.jpg",
       },
       imageHeading: "Crypto Dashboard",
@@ -45,7 +47,9 @@ const slider = (function () {
 
   function renderSlide(slide) {
     heading.textContent = slide.heading;
-    image.src = slide.images.desktop;
+    mobileSlide.srcset = slide.images.mobile;
+    tabletSlide.srcset = slide.images.tablet;
+    desktopSlide.src = slide.images.desktop;
     imageHeading.textContent = slide.imageHeading;
     imageDate.textContent = slide.imageDate;
   }
