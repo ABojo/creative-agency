@@ -1,3 +1,5 @@
+@use "../utils/breakpoints" as *;
+
 .hero {
   padding: 6.5rem 0;
   padding-left: var(--side-padding);
@@ -5,6 +7,10 @@
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
+
+  @media (max-width: $bp-5) {
+    background-image: url("../assets/images/tablet/image-hero.jpg");
+  }
 
   &__intro {
     max-width: 35rem;

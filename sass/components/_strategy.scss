@@ -1,3 +1,5 @@
+@use "../utils/breakpoints" as *;
+
 .strategy {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -9,6 +11,28 @@
     left: 51%;
     transform: translateX(-50%);
     position: absolute;
+
+    @media (max-width: $bp-2) {
+      top: 9rem;
+    }
+
+    @media (max-width: $bp-3) {
+      left: 50%;
+      width: 7rem;
+    }
+
+    @media (max-width: $bp-4) {
+      top: 7rem;
+    }
+
+    @media (max-width: $bp-5) {
+      top: 9rem;
+    }
+
+    @media (max-width: $bp-6) {
+      top: 7rem;
+      width: 6rem;
+    }
   }
 
   &__graphic {
@@ -23,6 +47,23 @@
     font-size: var(--fs-4);
     padding-top: 14rem;
     padding-left: 5rem;
+    padding-right: 1rem;
+
+    @media (max-width: $bp-2) {
+      padding-top: 8rem;
+    }
+
+    @media (max-width: $bp-4) {
+      padding-top: 5rem;
+    }
+
+    @media (max-width: $bp-5) {
+      padding-top: 8rem;
+    }
+
+    @media (max-width: $bp-6) {
+      padding-top: 5rem;
+    }
 
     div {
       max-width: 27rem;
@@ -33,6 +74,10 @@
       font-size: var(--fs-2);
       max-width: 15rem;
       margin-bottom: 3rem;
+
+      @media (max-width: $bp-6) {
+        margin-bottom: 2rem;
+      }
     }
 
     span {
@@ -42,6 +87,9 @@
     p {
       line-height: var(--line-height);
       margin-bottom: 3rem;
+      @media (max-width: $bp-6) {
+        margin-bottom: 2rem;
+      }
     }
 
     a {
@@ -79,6 +127,10 @@
     padding-bottom: 13rem;
     padding-left: var(--side-padding);
 
+    @media (max-width: $bp-2) {
+      padding-right: var(--side-padding);
+    }
+
     &::after {
       content: "";
       display: block;
@@ -89,6 +141,17 @@
       top: -9.5rem;
       left: 0;
       z-index: 1;
+
+      @media (max-width: $bp-2) {
+        top: -4.5rem;
+        height: 5rem;
+      }
+
+      @media (max-width: $bp-5) {
+        height: 8.1rem;
+        top: -8rem;
+        left: 0;
+      }
     }
 
     &::before {
@@ -101,6 +164,19 @@
       top: -9.5rem;
       left: -11rem;
       z-index: 1;
+
+      @media (max-width: $bp-2) {
+        top: -4.5rem;
+        height: calc(100% + 4.5rem);
+        width: 11.1rem;
+      }
+
+      @media (max-width: $bp-5) {
+        width: 2.1rem;
+        left: -2rem;
+        height: calc(100% + 8rem);
+        top: -8rem;
+      }
     }
   }
 
@@ -115,6 +191,14 @@
     font-size: var(--fs-1);
     font-weight: var(--fw-2);
     opacity: 0.25;
+
+    @media (max-width: $bp-4) {
+      left: -3rem;
+    }
+
+    @media (max-width: $bp-5) {
+      left: -1rem;
+    }
   }
 
   &__heading {

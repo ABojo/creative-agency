@@ -3,6 +3,7 @@
 @use "./components/strategy";
 @use "./components/footer";
 @use "./components/slider";
+@use "./utils/breakpoints" as *;
 
 :root {
   --color-red: #f94f4f;
@@ -20,6 +21,19 @@
 
   --side-padding: clamp(1rem, 11vw, 10rem);
   --line-height: 2rem;
+
+  @media (max-width: $bp-4) {
+    --side-padding: clamp(1rem, 5vw, 10rem);
+    --fs-2: 2.5rem;
+  }
+
+  @media (max-width: $bp-5) {
+    --fs-1: 4rem;
+  }
+
+  @media (max-width: $bp-6) {
+    --fs-4: 0.9375rem;
+  }
 }
 
 *,

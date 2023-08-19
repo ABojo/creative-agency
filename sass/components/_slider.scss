@@ -1,3 +1,5 @@
+@use "../utils/breakpoints" as *;
+
 .slider {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -9,6 +11,15 @@
     left: 51%;
     top: 11.5rem;
     transform: translateX(-50%);
+
+    @media (max-width: $bp-3) {
+      width: 7rem;
+      left: 50%;
+    }
+
+    @media (max-width: $bp-6) {
+      width: 6rem;
+    }
   }
 
   &__main {
@@ -16,6 +27,7 @@
     padding-left: var(--side-padding);
     padding-block: 9rem;
     align-self: start;
+    padding-right: 2rem;
   }
 
   &__heading {
@@ -29,6 +41,11 @@
     left: -25%;
     width: 125%;
     z-index: -1;
+
+    @media (max-width: $bp-2) {
+      width: 130%;
+      left: -30%;
+    }
 
     img {
       width: 100%;
