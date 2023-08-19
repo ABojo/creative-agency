@@ -1,5 +1,16 @@
 const leftArrow = document.getElementById("left-arrow");
 const rightArrow = document.getElementById("right-arrow");
+const mobileNavButton = document.querySelector(".mobile-nav__toggle");
+
+const mobileNav = (function () {
+  const mobileNav = document.querySelector(".mobile-nav");
+
+  function toggle() {
+    mobileNav.classList.toggle("mobile-nav--open");
+  }
+
+  return { toggle };
+})();
 
 //encapsulates slider logic
 const slider = (function () {
@@ -89,3 +100,6 @@ slider.init();
 //hook up slider controls
 leftArrow.addEventListener("click", slider.previous);
 rightArrow.addEventListener("click", slider.next);
+
+//hook up mobile nav button
+mobileNavButton.addEventListener("click", mobileNav.toggle);

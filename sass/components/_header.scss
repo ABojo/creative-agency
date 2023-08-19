@@ -9,8 +9,11 @@
   }
 
   @media (max-width: $bp-7) {
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding-block: 2.5rem;
+    padding-right: var(--side-padding);
   }
 
   &__logo {

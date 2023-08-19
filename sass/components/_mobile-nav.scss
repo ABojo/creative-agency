@@ -1,0 +1,64 @@
+@use "../utils/breakpoints" as *;
+
+.mobile-nav {
+  display: none;
+  position: relative;
+
+  @media (max-width: $bp-7) {
+    display: block;
+  }
+
+  &__toggle {
+    width: 2rem;
+    height: 1.5rem;
+    background-image: url("../assets/images/mobile/icon-hamburger.svg");
+    background-color: transparent;
+    border: none;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    background-color: var(--color-black-bg);
+    top: 4.5rem;
+    right: 0;
+    padding: 2rem 1rem;
+    width: 15rem;
+  }
+
+  &--open &__toggle {
+    background-image: url("../assets/images/mobile/icon-cross.svg");
+  }
+
+  &--open nav {
+    display: block;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  &__link {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: var(--fs-3);
+    display: block;
+
+    &--primary {
+      background-color: var(--color-red);
+      padding: 1.5rem;
+      font-weight: var(--fw-2);
+
+      &:hover {
+        background-color: var(--color-black-bg);
+      }
+    }
+  }
+}
