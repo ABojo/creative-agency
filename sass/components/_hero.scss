@@ -12,6 +12,18 @@
     background-image: url("../assets/images/tablet/image-hero.jpg");
   }
 
+  @media (max-width: $bp-7) {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)),
+      url("../assets/images/tablet/image-hero.jpg");
+    padding-right: var(--side-padding);
+  }
+
+  @media (max-width: $bp-9) {
+    background-image: url("../assets/images/mobile/image-hero.jpg");
+    background-position: top;
+    padding-top: 70vw;
+  }
+
   &__intro {
     max-width: 35rem;
   }
@@ -27,6 +39,10 @@
     line-height: var(--line-height);
     color: var(--color-black-text);
     margin-bottom: 4rem;
+
+    @media (max-width: $bp-7) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__cta {

@@ -8,6 +8,16 @@
   justify-content: space-between;
   position: relative;
 
+  @media (max-width: $bp-7) {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  @media (max-width: $bp-8) {
+    padding-block: 5rem;
+  }
+
   &__wave {
     position: absolute;
     top: 50%;
@@ -39,6 +49,10 @@
 
     @media (max-width: $bp-6) {
       padding: 1.5rem 1rem;
+    }
+
+    @media (max-width: $bp-7) {
+      padding: 1.5rem 3rem;
     }
 
     &:hover {

@@ -29,10 +29,16 @@
 
   @media (max-width: $bp-5) {
     --fs-1: 4rem;
+    --fs-2: 2rem;
+    --line-height: 1.5625rem;
   }
 
   @media (max-width: $bp-6) {
     --fs-4: 0.9375rem;
+  }
+
+  @media (max-width: $bp-7) {
+    --fs-1: 2.5rem;
   }
 }
 

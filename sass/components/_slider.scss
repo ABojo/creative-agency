@@ -6,6 +6,10 @@
   color: var(--color-white);
   position: relative;
 
+  @media (max-width: $bp-8) {
+    grid-template-columns: 1fr;
+  }
+
   &__wave {
     position: absolute;
     left: 51%;
@@ -20,6 +24,14 @@
     @media (max-width: $bp-6) {
       width: 6rem;
     }
+
+    @media (max-width: $bp-7) {
+      width: 5rem;
+    }
+
+    @media (max-width: $bp-8) {
+      display: none;
+    }
   }
 
   &__main {
@@ -28,12 +40,20 @@
     padding-block: 9rem;
     align-self: start;
     padding-right: 2rem;
+
+    @media (max-width: $bp-8) {
+      padding-block: 5rem;
+    }
   }
 
   &__heading {
     font-size: var(--fs-2);
     margin-bottom: 3rem;
     max-width: 34rem;
+
+    @media (max-width: $bp-8) {
+      max-width: 18rem;
+    }
   }
 
   &__graphic {
@@ -45,6 +65,16 @@
     @media (max-width: $bp-2) {
       width: 130%;
       left: -30%;
+    }
+
+    @media (max-width: $bp-7) {
+      width: 160%;
+      left: -60%;
+    }
+
+    @media (max-width: $bp-8) {
+      width: 100%;
+      left: 0;
     }
 
     img {
@@ -69,6 +99,14 @@
     padding-right: 10rem;
     gap: 0.5rem;
     font-size: var(--fs-4);
+
+    @media (max-width: $bp-3) {
+      padding-inline: 2.5rem;
+    }
+
+    @media (max-width: $bp-8) {
+      padding: 2.5rem;
+    }
   }
 
   &__arrows {

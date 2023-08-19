@@ -8,6 +8,11 @@
     grid-template-columns: 1fr 2fr;
   }
 
+  @media (max-width: $bp-7) {
+    grid-template-columns: 1fr 1fr;
+    padding-block: 2.5rem;
+  }
+
   &__logo {
     display: flex;
     align-items: center;
@@ -21,6 +26,10 @@
     justify-content: end;
     padding-right: var(--side-padding);
     padding-left: 1rem;
+
+    @media (max-width: $bp-7) {
+      display: none;
+    }
   }
 
   &__list {
